@@ -1,0 +1,22 @@
+<div class="uk-flex-center uk-margin-top" uk-grid>
+    <div class="uk-width-1-3@m">
+
+        <div class="uk-card uk-card-primary uk-card-body uk-box-shadow-small">
+            <h3 class="uk-card-title">Consulta de usuário</h3>
+            
+            <div class="uk-margin">
+                <label for="userId">Id do usuário</label>
+                <input id="userId" class="uk-input uk-form-large" type="number" placeholder="User ID" [(ngModel)]="userId">
+            </div>
+            
+            <div class="uk-margin uk-text-right">
+                <a href="javascript:void(0);" class="uk-button uk-button-default" (click)="consultar()">Consultar</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="uk-flex-center uk-margin-top" uk-grid *ngIf="userData">
+    O ID <span class="uk-label">{{userData.id}}</span> pertence ao usuário <span class="uk-label">{{userData.name}}</span>
+</div>
