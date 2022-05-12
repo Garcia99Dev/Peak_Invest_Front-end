@@ -13,7 +13,7 @@ export class ConsultaComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit(): void { }
-  
+
   consultar() {
     this.data.getConsultarUsuario(this.userId).subscribe(
       (response: any) => {

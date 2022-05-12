@@ -3,8 +3,7 @@ import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-investimento',
-  templateUrl: './investimento.component.html',
-  styleUrls: ['./investimento.component.css']
+  templateUrl: './investimento.component.html'
 })
 export class InvestimentoComponent implements OnInit {
 
@@ -15,7 +14,7 @@ export class InvestimentoComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit(): void { }
-  
+
   simular() {
     this.data.postSimularInvestimento(this.parcelas, this.valor).subscribe(
       (response: any) => {
